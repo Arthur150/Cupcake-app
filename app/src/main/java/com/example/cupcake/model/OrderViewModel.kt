@@ -16,13 +16,13 @@ class OrderViewModel : ViewModel() {
     val quantity: LiveData<Int> = _quantity
 
     private val _flavor = MutableLiveData<String>()
-    val flavor : LiveData<String> = _flavor
+    val flavor: LiveData<String> = _flavor
 
     private val _date = MutableLiveData<String>()
-    val date : LiveData<String> = _date
+    val date: LiveData<String> = _date
 
     private val _price = MutableLiveData<Double>()
-    val price : LiveData<String> = Transformations.map(_price) {
+    val price: LiveData<String> = Transformations.map(_price) {
         NumberFormat.getCurrencyInstance().format(it)
     }
 
@@ -32,16 +32,16 @@ class OrderViewModel : ViewModel() {
         resetOrder()
     }
 
-    fun setQuantity(numberCupcakes: Int){
+    fun setQuantity(numberCupcakes: Int) {
         _quantity.value = numberCupcakes
         updatePrice()
     }
 
-    fun setFlavor(desiredFlavor: String){
+    fun setFlavor(desiredFlavor: String) {
         _flavor.value = desiredFlavor
     }
 
-    fun setDate(pickupDate: String){
+    fun setDate(pickupDate: String) {
         _date.value = pickupDate
         updatePrice()
     }

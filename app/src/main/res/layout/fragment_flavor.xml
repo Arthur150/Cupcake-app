@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
      Copyright (C) 2020 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,12 +20,14 @@
     tools:context=".FlavorFragment">
 
     <data>
+
         <variable
             name="viewModel"
-            type="com.example.cupcake.model.OrderViewModel"/>
+            type="com.example.cupcake.model.OrderViewModel" />
+
         <variable
             name="flavorFragment"
-            type="com.example.cupcake.FlavorFragment"/>
+            type="com.example.cupcake.FlavorFragment" />
     </data>
 
     <ScrollView
@@ -118,7 +119,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/next_button"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/next_button"
-                style="?attr/materialButtonOutlinedStyle"/>
+                style="?attr/materialButtonOutlinedStyle" />
 
             <Button
                 android:id="@+id/next_button"
